@@ -18,7 +18,28 @@
             <img src="znacznik-zamkniecia-html.jpg" alt="znacznik zamknięcia">
         <h3>CSS Cheat Sheet</h3>
             <p><strong>CSS</strong> - Cascading Style Sheets, czyli arkusze stylów zawierające zasady formatowania strony internetowej.</p>
-    <img src="" alt="moje CV">
-    
-</body>
+            
+        <h3>Paradygmaty programowania</h3>
+            <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
+            <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
+            <p>Programowanie obiektowe - rodzaj programowania imperatywnego. To z czym komputer ma do czynienia to są obiekty, które mają właściwości i metody. Stan globalny przechowywany jest w obiektach. Klasy definiują zestaw obiektów, a te prowadzą ze sobą interakcje. Każdy obiekt jest instancją klasy.</p>
+            <p>Programowanie deklaratywne - nie mówimy co komputer ma zrobić, tylko jaki wynik uzyskać (np. HTML, gdzie nie mówimy jak komputer ma coś narysować, tylko co chcemy zobaczyc na stronie). Rozszerzenie tego paradygmatu jest programownie AI i programowanie kwantowe.</p>
+            <p>Programowanie proceduralne - kod podzielony na procedury wykonuje się krok po kroku. Wraz z powiększaniem się aplikacji powstaje problem z kontrolą globalnych zmiennych, a konkretnie z ich stanem (stan to wartość zmiennych używanych podczas jego działania). Stan wraz z rozwojem aplikacji jest zmieniany przez coraz więcej funkcji w coraz większej ilości miejsc. Rozwiązaniem są kolejne dwa paradygmaty: programowanie funkcyjne i obiektowe.</p>
+            <p>Programowanie funkcyjne - eliminuje stan globalny i wykorzystuje funkcje, które z kolei albo w ogóle nie korzystają ze stanu globalnego, albo go nie modyfikują. Jedynym stanem na którym bazują jest ten przekazany do nich w formie parametrów. Funkcje przenoszą jednej zbiór w drugi korzystając z jakiegoś wzoru. </p>
+            <p>Prgogramowanie konkatenatywne - coś zaawansowanego</p>
+            <img src="" alt="moje CV">
+        <h3>API</h3>
+        <p>API - Application Programming Interface, Interfejs Programistyczny Aplikacji to zestaw reguł definiujących w jaki sposób aplikacje mogą się ze sobą łączyć. API umożliwia jednej aplikacji (nazywanej klientem) korzystać z zasobów drugiej (nazywanej serwerem).</p>
+        <p>REST API - to interfejs API zgodny z zasadami REST (representional state transfer). Przy takich interfejsach można korzystać z prawie każdego języka (na co nie pozwalają inne rodzaje API), a także obsługują wiele formatów danych. Komunikacja odbywa się za pomocą <strong>żądań HTTP</strong> i za ich pomocą wykonywane są podstawowe funkcje bez danych, czyli tworzenie (POST), odczytywanie (GET), aktualizowanie (PUT) i usuwanie (DELETE), znane jako CRUD (create, read, update, delete). Zaletą API REST jest elastyczność  </p>
+        <p>Zasady REST API:</p>
+        <ul>
+            <li>Jednolity interfejs - wszystkie żądania do interfejsu dotyczące tego samego zasobu powinny wyglądać tak samo. Jeden element = jeden identyfikator URI. Zasoby nie powinny być zbyt duże.</li>
+            <li>Rozdzielenie klienta i serwera - aplikacje muszą być od siebie niezależne. Klient ma tylko identyfikator URI, natomiast serwer wysyła żądane dane za pomocą protokołu HTTP.</li>
+            <li>Bezstanowość - każde żądanie musi posiadać wszystkie niezbędne informacje do jego przetworzenia (interfejsy API REST nie wymagają żadnej sesji po stronie serwera. Serwer nie przechowuje żadnych danych związanych z żądaniem klienta.</li>
+            <li>Możliwość buforowania - buforowanie umożliwia zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.</li>
+            <li>Warstwowa architektura systemu - w API REST informacje w obie strony przechodzie przez różne warstwy, tak więc obie strony z zasady nie łączą się ze sobą bezpośrednio. W API REST żadna ze stron nie może mieć informacji czy łączy się z aplikacją końcową czy elementem pośreniczącym. </li>
+            <li>Kod na żądanie (opcjonalnie) - zwykle przekazuje się dane statyczne, ale jak już mamy do czynienia z kodem wykonywalnym, kod powinien byc wykonywany tylko na żądanie.</li>
+        </ul>
+        <p>SOAP</p>
+        </body>
 </html>
