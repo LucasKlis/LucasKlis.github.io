@@ -4,48 +4,130 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ResuMe + NooBook</title>
+        <title>NooBook Web PL</title>
     </head>
     <body style="background-color: rgb(74, 137, 137);">
-        <h1>Work in progress, content will be improved every day : )</h1>
-        <img src="cvPage1.jpg" alt="cv pierwsza strona" height="1300" width="900">
-        <img src="cvPage2.jpg" alt="cv druga strona" height="1300" width="900">   
-        <h2>Ok, drodzy Wszyscy, plan jest taki - robię stronę, na której będę mógł zaprezentować siebie, jak i swoje umiejętności, na teraz w postaci cheat sheetów (tak bardziej dla siebie, ale kto wie, może w dalszym etapie będzie to dobre miejsce dla innych osób, które rozpoczną swoją przygodę z programowaniem), następnie drobnych aplikacji. W dalszych etapach projekt zacznie nabierać konkretnych kształtów (mam kilka pomysłów), podzięlę go na etapy, może nawet na mniejsze projekty. </h2>
-        <h3>!Zawartość strony bazuje na kursach i poradnikach, które miałem okazję odbyć lub przeklikać. Zdarzy mi się wykorzystać istniejące elementy graficzne z innych stron, także gdybym drogi autorze naruszył jakieś prawa autorskie, daj proszę znać i rozwiążemy ten problem, nie chcę po prostu tworzyć koła od początku : )! </h3>
-        <h3>HTML Cheat Sheet</h3>
+    <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 12.12.22)</h1>
+    <hr>
+        <h2>Cześć, na stronie docelowo ma się znaleźć to, co przyda się każdej osobie rozpoczynającej swoją podróż z programowaniem webowm. 
+        <br>Na początku zawartość strony może być dosyć chaotyczna i przyjmować postać głównie notatek, ale plany są ambitne i z każdym dniem dodawane będą kolejne treści.   
+        </h2>
+            <h3>Drogi rekruterze! Nie załamuj się spoglądając na tę stronę : ) Szczególnie w pierwszym etapie będzie ona zawierać głównie kod html, czyli czystą treść. Na swoim koncie mam już projekty prezentowane dla takich firm, jak Swarovski, Timberland, Davidoff i wiele innych. Na tej stronie wyglądem zajmę się dopiero na poźniejszym etapie. Podrzucam do wglądu swoje <a href="Lucas Klis CV.pdf">cv</a> i zachęcam do kontaktu  </h3>
+                <h4>!Zawartość strony bazuje na kursach i poradnikach, które miałem okazję odbyć lub przeklikać. Zdarzy mi się wykorzystać istniejące elementy graficzne z innych stron, także gdybym drogi autorze naruszył jakieś prawa autorskie, daj proszę znać i rozwiążemy ten problem, nie chcę po prostu tworzyć koła od początku : )! </h3>
+                    <p>Przejdź do sekcji: <a href="#html">HTML</a> <a href="#css">CSS</a> <a href="#js">JavaScript</a> </p>
+    <h1 id="html">HTML Cheat Sheet</h1>
             <p><strong>HTML</strong> - Hypertext Markup Language, hipertekstowy język znaczników. Jest to język komputerowy opisujący strony internetowe. Obecnie standardem w użyciu jest wersja piąta języka (HTML5)</p>
             <p><strong>Hipertekst</strong> to tekst z hiperłączami/linkami do innych stron</p>
             <p><strong>Znaczniki</strong> to wyrażenia zamieszczane w ostrych nawiasach <mark> <> </mark> </p>
-            <img src="znacznik-otwarcia-html1.jpg" alt="znacznik otwarcia">
-            <img src="znacznik-zamkniecia-html.jpg" alt="znacznik zamknięcia">
+                <img src="znacznik-otwarcia-html1.jpg" alt="znacznik otwarcia">
+                <img src="znacznik-zamkniecia-html.jpg" alt="znacznik zamknięcia">
             <p> <strong> &lt;!DOCTYPE html&gt; </strong>- jest to informacja dla przeglądarki o typie dokumentu</p>
             <p> <strong> < html > </html></strong> - to z kolei deklaracja języka, w tym przypadku html. W środku powinnien się znaleźć cały dokument html. </p>
             
-            <p><strong> &lt;head&gt;</strong> - element opisujący ustawienia dokumentu (to, czego nie widać, co mamy w głowie).  </p>
-            <p><strong> &lt;body&gt;</strong> - element opisujący treść dokumentu (to, co widać, jak ciało). </p>
-            <p><strong>&lt;meta charset="UTF-8"&gt;</strong> - zestaw znaków kodu. Dzięki niemu poprawnie będą wyświetlać się najpopularniejsze znaki, w tym polskie litery alfabetu. Sam element &lt;meta&gt; będzie wykorzystywany częściej, ponieważ tworzymy dzięki temu meta tagi, czyli ustawienia strony dla przeglądarki. A jak ustawienia, to będą zawarte w sekcji &lt;head&gt;. Charset to skrót od "character set", czyli zestawu znaków, natomiast utf-8 to obecnie najpopularniejszy standard stron internetowych.</p>
-            <p><strong>&lt;h1&gt; - &lt;h6&gt;</strong> - nagłówki od największego, do najmniejszego.</p>
-            <img src="headings.png" alt="headingi">
-            <p><strong>&lt;p&gt;</strong>- paragrafy/akapity z tekstem </p>
-            <p><strong>lorem ipsum</strong> - wypełniacz tekstu. W większości edytorów wystarczy zacząć pisać <i>lorem...</i>, kliknąć enter i gotowe. </p>
+            <p><b> &lt;head&gt;</b> - element opisujący ustawienia dokumentu (to, czego nie widać, co mamy w głowie).  </p>
+            <p><b> &lt;body&gt;</b> - element opisujący treść dokumentu (to, co widać, jak ciało). </p>
+            <p><b>&lt;meta charset="UTF-8"&gt;</b> - zestaw znaków kodu. Dzięki niemu poprawnie będą wyświetlać się najpopularniejsze znaki, w tym polskie litery alfabetu. Sam element &lt;meta&gt; będzie wykorzystywany częściej, ponieważ tworzymy dzięki temu meta tagi, czyli ustawienia strony dla przeglądarki. A jak ustawienia, to będą zawarte w sekcji &lt;head&gt;. Charset to skrót od "character set", czyli zestawu znaków, natomiast utf-8 to obecnie najpopularniejszy standard stron internetowych.</p>
+            <p><b>&lt;h1&gt; - &lt;h6&gt;</b> - nagłówki od największego, do najmniejszego.</p>
+                <img src="headings.png" alt="headingi">
+            <p><b>&lt;p&gt;</b>- paragrafy/akapity z tekstem </p>
+            <p><b>&lt;br&gt;</b>- zacznij pisać od nowej linii</p>
+            <p><b>lorem ipsum</b> - wypełniacz tekstu. W większości edytorów wystarczy zacząć pisać <i>lorem...</i>, kliknąć enter i gotowe. </p>
+            <p><b>&lt;adress&gt;&lt;/address&gt;</b>- element address nie ma jakichś szególnych właściwości do edycji, działa przy edycji jak zwykły paragraf, ale jego zaletą jest ułatwienie pracy przeglądarką, a w szczególności wyszukiwarkom.</p>
+            <address>Łukasz Kliś <br>
+                87-100 Toruń <br>
+                I tak dalej...
+            </address>
+            <p><strong>niełamliwa/twarda spacja</strong> = & n b s p ; (bez spacji)</p> 
+            <p><strong> lewy znacznik jako string (&lt;)</strong> = & l t ; (ale bez spacji)  </p>
+            <p> <strong> znacznik jako string (&gt;)</strong> = & g t ; (tu też bez spacji)</p>
+            <p><strong>&lt;hr&gt;</strong>- linia horyzontalna. Towrzy poziomą linię odgradzającą treść </p>
+            <hr>
+            <p><strong>Formatowanie tekstu:</strong></p>
+            <p><strong>&lt;strong&gt;</strong>- Tekst <strong> uznany za ważny</strong> </p>
+            <p><b>&lt;b&gt;</b>- Tekst <b>pogrubiony</b></p>
+            <p><b>&lt;em&gt;</b>- Tekst <em>pochylony o zwiększonym nacisku</em></p>
+            <p><b>&lt;i&gt;</b>- Tekst <i>pochylony</i></p>
+            <p><b>&lt;small&gt;</b>- Tekst <small>pomniejszony</small></p>
+            <p><b>&lt;mark&gt;</b>- Tekst <mark>podświetlony</mark> </p>
+            <p><b>&lt;sup&gt;</b>- Tekst <sup>jako indeks górny</sup></p>
+            <p><b>&lt;sub&gt;</b>- Tekst <sub>jako indeks dolny</sub></p>
+            <p><b>&lt;s&gt;</b>- Tekst <s>przekreślony/nieaktualny</s></p>
+            <p><b>&lt;ins&gt;</b>- Tekst <ins>wstawiony</ins></p>
+            <p><b>&lt;del&gt;</b>- Tekst <del>przekreślony/usunięty</del></p>
+            <p><strong>&lt;ins&gt;</strong>- Tekst <ins>podekreślony/dodany</ins></p>
+                <h3>Listy html</h3>
+                    <p>Listy nie posiadają własnych tytułów, także trzeba korzystać z wcześniej poznanych nagłówków</p>
+                    <p><strong>&lt;ol&gt;</strong>- Uporządkowana lista, czyli taka, w której punkty są ponumerowane</p>
+                    <p><strong>&lt;li&gt;</strong>- Elememt listy, czyli jeden z punktów listy</p>
+                    <p><strong>&lt;ul&gt;</strong>- Nieuporządkowana lista, czyli lista bez kolejności, zwana równiez wypunktowaną</p>
+                    <p><strong>&lt;dl&gt;</strong>- Definicyjna lista, czyli taka, w której znajdują się dwa rodzaje elementów (&lt;dt&gt; termin definicji, &lt;dd&gt; sama definicja)</p>
+            <br>
+            <p><strong>&lt;a&gt;</strong>- Link do strony internetowej(ang. anchor). Pomiędzy znacnziki wpisujemy tekst odsyłacza, który będzie się wyświetlał na ekranie i kierował do docelowej strony. Każdy link musi miec swój atrybut <i>href</i>. </p>
+            <p><strong>&lt;href&gt;</strong>- (ang. <i>hypertext reference</i>) Adres linku zapisywany jako atrybut, </p>
+            <p><strong>&lt;target&gt;</strong>- kolejny atrybut linku, w którym decydujemy gdzie dana strona ma się otworzyć. Nadając mu wartość _blank otworzy się w konwej karcie, nie ustawiając żadnej lub nadając wartość _self strona otworzy się w miejsce tej zawierającej link.</p>
+            <p><strong>&lt;rel&gt;</strong>- atrybut linku <i>relation</i>, może przyjąć dwie wartości : dofollow i nofollow. Pierwszy jest defaultowy, także nie musimy go zapisywać. Przy drugim mówimy botom wyszukiwarek żeby nie śledziły tego linka przy zbieraniu danych o stronach internetowych </p>
+            <p><strong>&lt;#&gt;</strong>- własność atrybutu <i>href</i> przenosząca nas do sekcji tej samej strony. Oczywiście najpierw musimy stworzyć element o tym samym id, które będziemy wywoływać. Sam krzyżyk (hash tag) przeniesie nas na tę samą stronę na początek. Link do stron wcześniej w hierarchii zapisujemy za pomocą dwóch kropek. </p>
+            <p><strong>&lt;Co&gt;</strong>- Co</p>
+
+            <p>Adres URL - Uniform Resource Locator, czyli ujednolicony format adresowania zasobów</p>
+            <p>Adres składa się z:</p>
+            <ul>
+                <li>protokołu http lub https, po którym następuje dwukropek i dwa ukośniki (forward slashe)</li></ul>
+                <li><code>lucasklis.github.io</code> host, czyli adres serwera</li>
+                <li><code>/jakislink</code> i ścieżka dstępu do zasobu</li>
+            <h3>Protokoły adresu</h3>
+                <p><b>http</b>- Hypertext Transfer Protocol - protokół do przesyłania stron internetowych </p>
+                <p><b>https</b>- Hypoertext Transfer Protocol Secure, czyli zabezpieczony protokół do przesyłania stron internetowych</p>
+                <p><b>ftp</b>- File Transfer Protocol, czyli protokół do przesyłu plików</p>
+
+            <p>Serwer - z ang. <i>host</i>, czyli komputer ze stałym połączeniem sieciowym, na którym znajdują sie dane strony internetowej.</p>
+            <p>Hosting - użyczanie miejsca na serwerze. Dostajemy do niego adres i IP </p>
+            <p>IP - Internet Protocol, czyli ścieżka dostępu do serwera przedstawiona za pomocą cyfr (np. 12.123.321.12)</p>
+            <p>Domena - nazwa strony bardziej przyjazna dla człowieka niż IP </p>
+            <p>Subdomena - nazwy podkatalogów dodawane przed domeną</p>
+            <p> WWW - World Wide Web, czyli ogólnoświatowa sieć. Najpopularniejsza subdomena, której obecnie nie musimy dodawać dzięki przekieowaniom. Przekierowania te mają za zadanie niwelowanie duplikatów stron (jedna z www, druga bez) i zapisywane są w pliku .htaccess na serwerze.</p>
+            <p>Struktura plików - strony internetowe grupujemy w folderach</p>
+            <p>Friendly URL - usuwanie rozszerzeń adresów i trzymanie się pewnego schematu (jedna strona, jeden folder i w nim plik główny o nazwie index.html)</p>
+            <p> Link html - odsyłacze do stron. Linki wewnętrzne prowadzą do jakiejś sekcji na tej samej stronie, albo do podstron, ale nadal w ramach tej samej domeny. Linki zewnętrzne natomiast prowadzą do stron znajdujących się na innych domenach.</p> 
+            <p>Każdy element może mieć swój atrybut, który może mieć swoją właśność (property)</p>
+            <img src="link-odsylacz.png" alt="link-odsylacz">
+            <p>SEO - (ang. <i>Search Engine Optimization </i> optymalizacja strony internetowej pod kątem wyszukiwań.</p>
             
+            <h3>Grafika</h3>
+                <p>Format JPG/JPEG (Joint Photographic Experts Group) to najpopularniejszy format graficzny w sieci. Jest to format tzw. stratnej kompersji (możemy zmniejszyć wagę pliku kosztem jakości). Sama kompresja polega na zmniejszeniu liczby kolorów na zdjęciu. Skutkiem ubocznym kompresji czasem stają się artefakty, czyli skupiska pikseli o tych samych kolorach stworzone przez algorytm kompresji. </p>
+                <p>Rozdzielczość to rozmiar cyfrowego zdjęcia podana w pikselach, a konkretniej stosunek jej szerokości do wysokości. Najpopularniejsza rozdzielczość to High Definition (HD), czyli 192px x 1080px. Są jeszcze megapiksele (MP), które są po prostu wynikiem mnożenia rozdzielczości. Większe zdjęcia są dopasowywane do rozmiarów strony, ale nie zmniejszy to ich wagi, ponieważ i tak trzeba pobrać całe zdjęcie przed dopasowaniem. </p>
+                <p>GIF (Graphic Interchange Format) jest również popularnym formatem graficznym, który można kompresować bez straty na jakości. Gify można animować. </p>
+                <p>PNG (Portable Network Graphic), kolejny bezstratny format. Największym atutem tego formatu jest przezroczystość (zapisanie grafik bez tła zwane alpha channel).</p>
+                <p><strong>&lt;img&gt;</strong>- dodajemy obraz. Potrzebny jest jeszcze atrybut <i>src</i> określający miejsce grafiki  </p>
+                <p><strong>&lt;width&gt;</strong> atrybut określający szerokość obrazka wyrażana w pikselach.</p>
+                <p><strong>&lt;height&gt;</strong> atrybut określający wysokość obrazka wyrażana w pikselach. </p>
+                <p><strong>&lt;alt&gt;</strong> (ang. <i>alternative)</i>atrybut, który jako tekst powinien odwzorować zawartość zdjęcia. Pokaże się on tylko wtedy, gdy obraz z jakiegoś powodu się nie wyświetli i będzie to jedyne info co w tym miejscu chcieliśmy pokazać. Przydaje się też robotom indeksującym. </p>
+                
+                <p><strong>&lt;title&gt;</strong> - tytuł obrazka, który pokaże się po najechaniu na niego kusorem. </p>
+                <p><strong>&lt;figure&gt;</strong> element do zaznaczenia samodzielnej cześci dopkumentu. </p>
+                <p><strong>&lt;figcaption&gt;</strong> właściwy opis zdjęcia. </p>
+
+            <h3>Tabela</h3>
+               <p><strong>&lt;table&gt;</strong> tworzymy tabelę html. </p>
+               <p><strong>&lt;tr&gt;</strong> tworzymy wiersz tabeli html. Możemy dodać argument <i>rowspan</i>, który określi na ile wierszy rozciągnąć bieżący </p>
+               <p><strong>&lt;td&gt;</strong> tworzymy komórkę (data) w tabeli html. Możemy dodać argument <i>colspan</i>, który określi na ile komórek rozciągnąć bieżącą. </p>
+               <p><strong>&lt;th&gt;</strong> tworzymy nagłówek tabeli html. Warto dodać do niego atrybut <i>scope</i>, który określa do czego odnosi się nagłówek - zależnie od własności, col to kolumnyk, a row to wiersze.</p>
+               <p><strong>&lt;thead&gt; &lt;tbody&gt; &lt;tfoot&gt;</strong> - to nic innego jak sekcje tabeli, takie same, jak w samym dokumencie html. Są opcjonalne. .</p>
             
-            <p> lewy znacznik jako string (&lt;) = & l t ; (ale bez spacji)  </p>
-            <p> prawy znacznik jako string (&gt;) = & g t ; (tu też bez spacji)</p>
+            <h3> Elementy blokowe i liniowe</h3>
+                <p>W html możemy wyróżnić te rodzaje elementów. Najprościej, te liniowe nie są takie zachłanne, bo biorą tylko tyle miejsca, ile potrzebują i nie widzą np. problemu, żeby w tej samej linni znaleźć się z innym elementem liniowym. Natomiast elementy blokowe zawsze zajmują całą linię i kolejny element będzie wyświetlony poniżej. </p>
+                <p> Przykładem elementów blokowych może być header, paragraf, lista i jej elementy, natomiast liniowe to link, pogrubienie, pochylenie, kursywa czy też obraz </p>
+                <img src="logo.png" width="100" height="100" title="logo v">
+
+            <h3>Klasy i id</h3>
+                <p><strong>&lt;id&gt;</strong> - identyfikator elementu, nadawany jako jego atrybut. Może służyć również jako selektor css  (wywoływany za pomocą #), o czym dalej.</p>
+                <p><strong>&lt;class&gt;</strong> - klasa elementu to prawie to samo, co <i>id</i>, ale nadawane grupom. Może służyć również jako selektor css (wywoływany za pomocą .).</p>
 
 
-
-
-
-
-
-
-
-
-
-        <h3>CSS Cheat Sheet</h3>
+            <h1 id="css">CSS Cheat Sheet</h1>
+            
             <p><strong>CSS</strong> - Cascading Style Sheets, czyli arkusze stylów zawierające zasady formatowania strony internetowej.</p>
-            
+
         <h3>Paradygmaty programowania</h3>
             <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
             <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
@@ -54,7 +136,6 @@
             <p>Programowanie proceduralne - kod podzielony na procedury wykonuje się krok po kroku. Wraz z powiększaniem się aplikacji powstaje problem z kontrolą globalnych zmiennych, a konkretnie z ich stanem (stan to wartość zmiennych używanych podczas jego działania). Stan wraz z rozwojem aplikacji jest zmieniany przez coraz więcej funkcji w coraz większej ilości miejsc. Rozwiązaniem są kolejne dwa paradygmaty: programowanie funkcyjne i obiektowe.</p>
             <p>Programowanie funkcyjne - eliminuje stan globalny i wykorzystuje funkcje, które z kolei albo w ogóle nie korzystają ze stanu globalnego, albo go nie modyfikują. Jedynym stanem na którym bazują jest ten przekazany do nich w formie parametrów. Funkcje przenoszą jednej zbiór w drugi korzystając z jakiegoś wzoru. </p>
             <p>Prgogramowanie konkatenatywne - coś zaawansowanego</p>
-            <img src="" alt="moje CV">
         <h3>API</h3>
         <p>API - Application Programming Interface, Interfejs Programistyczny Aplikacji to zestaw reguł definiujących w jaki sposób aplikacje mogą się ze sobą łączyć. API umożliwia jednej aplikacji (nazywanej klientem) korzystać z zasobów drugiej (nazywanej serwerem).</p>
         <p>REST API - to interfejs API zgodny z zasadami REST (representional state transfer). Przy takich interfejsach można korzystać z prawie każdego języka (na co nie pozwalają inne rodzaje API), a także obsługują wiele formatów danych. Komunikacja odbywa się za pomocą <strong>żądań HTTP</strong> i za ich pomocą wykonywane są podstawowe funkcje bez danych, czyli tworzenie (POST), odczytywanie (GET), aktualizowanie (PUT) i usuwanie (DELETE), znane jako CRUD (create, read, update, delete). Zaletą API REST jest elastyczność  </p>
@@ -68,5 +149,22 @@
             <li>Kod na żądanie (opcjonalnie) - zwykle przekazuje się dane statyczne, ale jak już mamy do czynienia z kodem wykonywalnym, kod powinien byc wykonywany tylko na żądanie.</li>
         </ul>
         <p>SOAP</p>
+        <h1 id="js">JavaScript</h1>
+        <p>Rozwój strony:</p>
+        <ul> 
+            <li>Cheat Sheets Html, Css, Js, Vue</li>
+            <ul>
+                <li>Html how2html</li>
+                <li>Html W3Schools</li>
+            </ul>
+            <li>Routing</li>
+            <li>Wybór języka</li>
+            <li>Nowa domena</li>
+            <li>Komunikacja chat/komentarze</li>
+            <li>Bot</li>
+            <li>Sekcja audio/video</li>
+            <li>Cykliczny update</li>
+        </ul>
+        <hr>
         </body>
 </html>
