@@ -5,16 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NooBook Web PL</title>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body style="background-color: rgb(225, 225, 225);">
-    <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 14.12.22)</h1>
+        <header>
+            <a href="http://lucasklis.github.io">
+                <img src="logo.png" alt="logoNooBook" width="200" height="200">
+            </a>
+            <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 14.12.22)</h1>
+            <nav>
+                <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">Css</a></li>
+                    <li><a href="#js">JavaScript</a></li>
+                    <li><a href="#teoria">Niezbędna teoria</a></li>
+                    <li><a href="#rozwój">Dalszy rozwój strony</a></li>
+
+            </ul></nav>
+        </header>    
     <hr>
         <h2>Cześć, na stronie docelowo ma się znaleźć to, co przyda się każdej osobie rozpoczynającej swoją podróż z programowaniem webowm. 
         <br>Na początku zawartość strony może być dosyć chaotyczna i przyjmować postać głównie notatek, ale plany są ambitne i z każdym dniem dodawane będą kolejne treści.   
         </h2>
             <h3>Drogi rekruterze! Nie załamuj się spoglądając na tę stronę : ) Szczególnie w pierwszym etapie będzie ona zawierać głównie kod html, czyli czystą treść. Na swoim koncie mam już projekty prezentowane dla takich firm, jak Swarovski, Timberland, Davidoff i wiele innych. Na tej stronie wyglądem zajmę się dopiero na poźniejszym etapie. Podrzucam do wglądu swoje <a href="Lucas Klis CV.pdf">cv</a> i zachęcam do kontaktu  </h3>
                 <h4>!Zawartość strony bazuje na kursach i poradnikach, które miałem okazję odbyć lub przeklikać. Zdarzy mi się wykorzystać istniejące elementy graficzne z innych stron, także gdybym drogi autorze naruszył jakieś prawa autorskie, daj proszę znać i rozwiążemy ten problem, nie chcę po prostu tworzyć koła od początku : )! </h3>
-                    <p>Przejdź do sekcji: <a href="#html">HTML</a> <a href="#css">CSS</a> <a href="#js">JavaScript</a> </p>
     <h2 id="html">HTML Cheat Sheet</h2>
             <p><strong>HTML</strong> - Hypertext Markup Language, hipertekstowy język znaczników. Jest to język komputerowy opisujący strony internetowe. Obecnie standardem w użyciu jest wersja piąta języka (HTML5)</p>
             <p><strong>Hipertekst</strong> to tekst z hiperłączami/linkami do innych stron</p>
@@ -117,14 +131,28 @@
             <h3> Elementy blokowe i liniowe</h3>
                 <p>W html możemy wyróżnić te rodzaje elementów. Najprościej, te liniowe nie są takie zachłanne, bo biorą tylko tyle miejsca, ile potrzebują i nie widzą np. problemu, żeby w tej samej linni znaleźć się z innym elementem liniowym. Natomiast elementy blokowe zawsze zajmują całą linię i kolejny element będzie wyświetlony poniżej. </p>
                 <p> Przykładem elementów blokowych może być header, paragraf, lista i jej elementy, natomiast liniowe to link, pogrubienie, pochylenie, kursywa czy też obraz </p>
-                <img src="logo.png" width="100" height="100" title="logo v">
+                <img src="someLogo.png" width="100" height="100" title="logo v">
 
             <h3>Klasy i id</h3>
                 <p><strong>&lt;id&gt;</strong> - identyfikator elementu, nadawany jako jego atrybut. Może służyć również jako selektor css  (wywoływany za pomocą #), o czym dalej.</p>
                 <p><strong>&lt;class&gt;</strong> - klasa elementu to prawie to samo, co <i>id</i>, ale nadawane grupom. Może służyć również jako selektor css (wywoływany za pomocą .).</p>
-
-
+            <h3>Sekcje</h3>
+            <p>Do wersji HTML5 wysztkie sekcje tworzono za pomocą elementu &lt;div&gt;. Wtedy pojawiły się wyodrębnione elementy, które mają na celu usprawnić pracę zarówno użytkownikom, jak i przeglądarkom. Możemy do nich zaliczyć:</p>
+            <ul>
+                <li><b>&lt;article&gt;</b>- niezależna cześć strony, głównie przydatna przy pisaniu blogów</li>
+                <li><b>&lt;aside&gt;</b> - czyli coś z boku, a w tym wypadku coś poza naszym <i>main</i>, jak np. panel boczny.</li> 
+                <li><b>&lt;footer&gt;</b>- (ang. <i>footer</i>- stopka) sekcja na końcu naszej strony. Często zamieszczamy tam dane kontaktowe, czy też linki do innych stron</li>
+                <li><b>&lt;header&gt;</b>- to, co chcemy wyświetlać na górze. Z zasady umieszcza się tam logo i nawigację strony.</li>
+                <li><b>&lt;main&gt;</b>- główna treść strony</li>
+                <li><b>&lt;nav&gt;</b>- nawigacja strony</li>
+                <li><b>&lt;section&gt;</b>- sekcja ogólnego przeznaczenia, bardzo przydatna do grupowania i utrzymania na stronie porządku</li>
+                
+            </ul>
+            <img src="layout.png" alt="layout strony">
+            <p><b>Layout</b> to inaczej układ naszej strony. Przedstawiamy go za pomocą sekcji i generlanie ułatwia to grupowanie elementów.</p>
             
+            <p>&lt;div&gt; - (ang. <i>division - sekcja)</i> Najpopularniejszy element blokowy zwany potocznie boxem lub kontenerem.</p>
+            <h3>Input</h3>            
             
             
                 <h2 id="css">CSS Cheat Sheet</h2>
@@ -154,35 +182,37 @@
         <p><b>Gradienty</b> to płynne przejścia kolorów z jednego w drugi.</p>
         
         
-            <h3>Paradygmaty programowania</h3>
-            <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
-            <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
-            <p>Programowanie obiektowe - rodzaj programowania imperatywnego. To z czym komputer ma do czynienia to są obiekty, które mają właściwości i metody. Stan globalny przechowywany jest w obiektach. Klasy definiują zestaw obiektów, a te prowadzą ze sobą interakcje. Każdy obiekt jest instancją klasy.</p>
-            <p>Programowanie deklaratywne - nie mówimy co komputer ma zrobić, tylko jaki wynik uzyskać (np. HTML, gdzie nie mówimy jak komputer ma coś narysować, tylko co chcemy zobaczyc na stronie). Rozszerzenie tego paradygmatu jest programownie AI i programowanie kwantowe.</p>
-            <p>Programowanie proceduralne - kod podzielony na procedury wykonuje się krok po kroku. Wraz z powiększaniem się aplikacji powstaje problem z kontrolą globalnych zmiennych, a konkretnie z ich stanem (stan to wartość zmiennych używanych podczas jego działania). Stan wraz z rozwojem aplikacji jest zmieniany przez coraz więcej funkcji w coraz większej ilości miejsc. Rozwiązaniem są kolejne dwa paradygmaty: programowanie funkcyjne i obiektowe.</p>
-            <p>Programowanie funkcyjne - eliminuje stan globalny i wykorzystuje funkcje, które z kolei albo w ogóle nie korzystają ze stanu globalnego, albo go nie modyfikują. Jedynym stanem na którym bazują jest ten przekazany do nich w formie parametrów. Funkcje przenoszą jednej zbiór w drugi korzystając z jakiegoś wzoru. </p>
-            <p>Prgogramowanie konkatenatywne - coś zaawansowanego</p>
-        <h3>API</h3>
-        <p>API - Application Programming Interface, Interfejs Programistyczny Aplikacji to zestaw reguł definiujących w jaki sposób aplikacje mogą się ze sobą łączyć. API umożliwia jednej aplikacji (nazywanej klientem) korzystać z zasobów drugiej (nazywanej serwerem).</p>
-        <p>REST API - to interfejs API zgodny z zasadami REST (representional state transfer). Przy takich interfejsach można korzystać z prawie każdego języka (na co nie pozwalają inne rodzaje API), a także obsługują wiele formatów danych. Komunikacja odbywa się za pomocą <strong>żądań HTTP</strong> i za ich pomocą wykonywane są podstawowe funkcje bez danych, czyli tworzenie (POST), odczytywanie (GET), aktualizowanie (PUT) i usuwanie (DELETE), znane jako CRUD (create, read, update, delete). Zaletą API REST jest elastyczność  </p>
-        <p>Zasady REST API:</p>
-        <ul>
-            <li>Jednolity interfejs - wszystkie żądania do interfejsu dotyczące tego samego zasobu powinny wyglądać tak samo. Jeden element = jeden identyfikator URI. Zasoby nie powinny być zbyt duże.</li>
-            <li>Rozdzielenie klienta i serwera - aplikacje muszą być od siebie niezależne. Klient ma tylko identyfikator URI, natomiast serwer wysyła żądane dane za pomocą protokołu HTTP.</li>
-            <li>Bezstanowość - każde żądanie musi posiadać wszystkie niezbędne informacje do jego przetworzenia (interfejsy API REST nie wymagają żadnej sesji po stronie serwera. Serwer nie przechowuje żadnych danych związanych z żądaniem klienta.</li>
-            <li>Możliwość buforowania - buforowanie umożliwia zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.</li>
-            <li>Warstwowa architektura systemu - w API REST informacje w obie strony przechodzie przez różne warstwy, tak więc obie strony z zasady nie łączą się ze sobą bezpośrednio. W API REST żadna ze stron nie może mieć informacji czy łączy się z aplikacją końcową czy elementem pośreniczącym. </li>
-            <li>Kod na żądanie (opcjonalnie) - zwykle przekazuje się dane statyczne, ale jak już mamy do czynienia z kodem wykonywalnym, kod powinien byc wykonywany tylko na żądanie.</li>
-        </ul>
-        <p>SOAP</p>
+    
         
         
         
         <h2 id="js">JavaScript</h2>
+        <h2 id="teoria">Niezbędna teoria</h2>      
         
+        <h3>Paradygmaty programowania</h3>
+        <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
+        <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
+        <p>Programowanie obiektowe - rodzaj programowania imperatywnego. To z czym komputer ma do czynienia to są obiekty, które mają właściwości i metody. Stan globalny przechowywany jest w obiektach. Klasy definiują zestaw obiektów, a te prowadzą ze sobą interakcje. Każdy obiekt jest instancją klasy.</p>
+        <p>Programowanie deklaratywne - nie mówimy co komputer ma zrobić, tylko jaki wynik uzyskać (np. HTML, gdzie nie mówimy jak komputer ma coś narysować, tylko co chcemy zobaczyc na stronie). Rozszerzenie tego paradygmatu jest programownie AI i programowanie kwantowe.</p>
+        <p>Programowanie proceduralne - kod podzielony na procedury wykonuje się krok po kroku. Wraz z powiększaniem się aplikacji powstaje problem z kontrolą globalnych zmiennych, a konkretnie z ich stanem (stan to wartość zmiennych używanych podczas jego działania). Stan wraz z rozwojem aplikacji jest zmieniany przez coraz więcej funkcji w coraz większej ilości miejsc. Rozwiązaniem są kolejne dwa paradygmaty: programowanie funkcyjne i obiektowe.</p>
+        <p>Programowanie funkcyjne - eliminuje stan globalny i wykorzystuje funkcje, które z kolei albo w ogóle nie korzystają ze stanu globalnego, albo go nie modyfikują. Jedynym stanem na którym bazują jest ten przekazany do nich w formie parametrów. Funkcje przenoszą jednej zbiór w drugi korzystając z jakiegoś wzoru. </p>
+        <p>Prgogramowanie konkatenatywne - coś zaawansowanego</p>
+    <h3>API</h3>
+    <p>API - Application Programming Interface, Interfejs Programistyczny Aplikacji to zestaw reguł definiujących w jaki sposób aplikacje mogą się ze sobą łączyć. API umożliwia jednej aplikacji (nazywanej klientem) korzystać z zasobów drugiej (nazywanej serwerem).</p>
+    <p>REST API - to interfejs API zgodny z zasadami REST (representional state transfer). Przy takich interfejsach można korzystać z prawie każdego języka (na co nie pozwalają inne rodzaje API), a także obsługują wiele formatów danych. Komunikacja odbywa się za pomocą <strong>żądań HTTP</strong> i za ich pomocą wykonywane są podstawowe funkcje bez danych, czyli tworzenie (POST), odczytywanie (GET), aktualizowanie (PUT) i usuwanie (DELETE), znane jako CRUD (create, read, update, delete). Zaletą API REST jest elastyczność  </p>
+    <p>Zasady REST API:</p>
+    <ul>
+        <li>Jednolity interfejs - wszystkie żądania do interfejsu dotyczące tego samego zasobu powinny wyglądać tak samo. Jeden element = jeden identyfikator URI. Zasoby nie powinny być zbyt duże.</li>
+        <li>Rozdzielenie klienta i serwera - aplikacje muszą być od siebie niezależne. Klient ma tylko identyfikator URI, natomiast serwer wysyła żądane dane za pomocą protokołu HTTP.</li>
+        <li>Bezstanowość - każde żądanie musi posiadać wszystkie niezbędne informacje do jego przetworzenia (interfejsy API REST nie wymagają żadnej sesji po stronie serwera. Serwer nie przechowuje żadnych danych związanych z żądaniem klienta.</li>
+        <li>Możliwość buforowania - buforowanie umożliwia zwiększenie wydajności po stronie klienta przy jednoczesnym zwiększeniu skalowalności po stronie serwera.</li>
+        <li>Warstwowa architektura systemu - w API REST informacje w obie strony przechodzie przez różne warstwy, tak więc obie strony z zasady nie łączą się ze sobą bezpośrednio. W API REST żadna ze stron nie może mieć informacji czy łączy się z aplikacją końcową czy elementem pośreniczącym. </li>
+        <li>Kod na żądanie (opcjonalnie) - zwykle przekazuje się dane statyczne, ale jak już mamy do czynienia z kodem wykonywalnym, kod powinien byc wykonywany tylko na żądanie.</li>
+    </ul>
+    <p>SOAP</p>
         
-        
-        <h2>Rozwój strony:</h2>
+
+        <h2 id="rozwój">Rozwój strony:</h2>
         <ul> 
             <li>Cheat Sheets Html, Css, Js, Vue</li>
             <ul>
