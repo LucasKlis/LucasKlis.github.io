@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NooBook Web PL</title>
     </head>
-    <body style="background-color: rgb(74, 137, 137);">
-    <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 12.12.22)</h1>
+    <body style="background-color: rgb(225, 225, 225);">
+    <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 14.12.22)</h1>
     <hr>
         <h2>Cześć, na stronie docelowo ma się znaleźć to, co przyda się każdej osobie rozpoczynającej swoją podróż z programowaniem webowm. 
         <br>Na początku zawartość strony może być dosyć chaotyczna i przyjmować postać głównie notatek, ale plany są ambitne i z każdym dniem dodawane będą kolejne treści.   
@@ -15,7 +15,7 @@
             <h3>Drogi rekruterze! Nie załamuj się spoglądając na tę stronę : ) Szczególnie w pierwszym etapie będzie ona zawierać głównie kod html, czyli czystą treść. Na swoim koncie mam już projekty prezentowane dla takich firm, jak Swarovski, Timberland, Davidoff i wiele innych. Na tej stronie wyglądem zajmę się dopiero na poźniejszym etapie. Podrzucam do wglądu swoje <a href="Lucas Klis CV.pdf">cv</a> i zachęcam do kontaktu  </h3>
                 <h4>!Zawartość strony bazuje na kursach i poradnikach, które miałem okazję odbyć lub przeklikać. Zdarzy mi się wykorzystać istniejące elementy graficzne z innych stron, także gdybym drogi autorze naruszył jakieś prawa autorskie, daj proszę znać i rozwiążemy ten problem, nie chcę po prostu tworzyć koła od początku : )! </h3>
                     <p>Przejdź do sekcji: <a href="#html">HTML</a> <a href="#css">CSS</a> <a href="#js">JavaScript</a> </p>
-    <h1 id="html">HTML Cheat Sheet</h1>
+    <h2 id="html">HTML Cheat Sheet</h2>
             <p><strong>HTML</strong> - Hypertext Markup Language, hipertekstowy język znaczników. Jest to język komputerowy opisujący strony internetowe. Obecnie standardem w użyciu jest wersja piąta języka (HTML5)</p>
             <p><strong>Hipertekst</strong> to tekst z hiperłączami/linkami do innych stron</p>
             <p><strong>Znaczniki</strong> to wyrażenia zamieszczane w ostrych nawiasach <mark> <> </mark> </p>
@@ -124,13 +124,37 @@
                 <p><strong>&lt;class&gt;</strong> - klasa elementu to prawie to samo, co <i>id</i>, ale nadawane grupom. Może służyć również jako selektor css (wywoływany za pomocą .).</p>
 
 
-            <h1 id="css">CSS Cheat Sheet</h1>
+            
+            
+            
+                <h2 id="css">CSS Cheat Sheet</h2>
             
             <p><strong>CSS</strong> - (Cascading Style Sheets) arkusze stylów zawierające zasady formatowania strony internetowej, czyli to jak wygląda.</p>
             <p>Reguły/Zasady CSS zbudowane są z własności(property) zakończonej dwokropkiem, następującej po nim wartości (value) i na końcu średnikiem.</p>
             <p>Wartości moga mieć kilka własności oddzielonych spacją.</p>
             <img src="css-budowa.png" alt="budowa css" width="400" height="300">
-        <h3>Paradygmaty programowania</h3>
+            <p>Reguły CSS wiążemy z konkretnymi elementami za pomocą <i>selektorów</i></p>
+            <p>Selektorem może być:</p>
+            <ul>
+                <li>wcześniej stworzone <i>id</i>elementu, np. <b>#identyfikatorelementu</b></li>
+                <li>bądź też <i>klasa</i>elementu, np. <b>.nazwaklasy</b></li>
+                <li>jak równiez i sam element, np. <b>h1</b></li>
+            </ul>
+            <h3>Dodawanie CSS</h3>
+            <p>Istnieją trzy możliwości:</p>
+            <ul>
+                <li>za pomocą tzw. liniowego stylu, czyli umieszczenia atrybutu <i>style</i> bezpośrednio w elemencie html - <i>&lt;p style="itutajcss"&gt;</i>. Nie zaleca się korzystania z tego sposobu ze względu na zmniejszanie czytelności kodu.</li>
+                <li>jako samoodzielny element <i>style</i> na końcu sekcji <i>head</i> w pliku html.</li>
+                <li>jako oddzielny plik CSS. To w większości przypadków najlepsza metoda. Tworzymy nowy plik z końcówką <i>.css</i> i umieszczamy w nim wszystko to, co wcześniej mieliśmy w sekcji <i>style</i>, czy samych elementach za pomocą liniowego stylowania. Następnie trzeba jeszcze powiedzieć naszej stronie gdzie ma szukać swoich styli. Robimy to za pomocą dodanie elementu <i>link</i> do sekcji <i>head</i>: </li>
+                    <p><i>&lt;link rel="stylesheet" href="css/main.css"&gt;</i></p>
+                    <p>Dodaliśmy atrybut <i>rel</i> z własnością <i>stylesheet</i>, co mówi naszej stronie co chcemy jej "podlinkować". Drugi element <i>href</i> informuje jak wygląda ścieżka do tego pliku. W powyższym przykładzie wskazaliśmy plik <i>css</i> w folderze <i>css</i>.</p>
+                    <p>!Element <i>&lt;link&gt;</i> to nie to samo, co element <i>&lt;a&gt;</i></p>. Ten pierwszy zawsze występuje w sekcji <i>head</i>, drugi 
+
+            </ul>
+        <p><b>Gradienty</b> to płynne przejścia kolorów z jednego w drugi.</p>
+        
+        
+            <h3>Paradygmaty programowania</h3>
             <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
             <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
             <p>Programowanie obiektowe - rodzaj programowania imperatywnego. To z czym komputer ma do czynienia to są obiekty, które mają właściwości i metody. Stan globalny przechowywany jest w obiektach. Klasy definiują zestaw obiektów, a te prowadzą ze sobą interakcje. Każdy obiekt jest instancją klasy.</p>
@@ -151,8 +175,14 @@
             <li>Kod na żądanie (opcjonalnie) - zwykle przekazuje się dane statyczne, ale jak już mamy do czynienia z kodem wykonywalnym, kod powinien byc wykonywany tylko na żądanie.</li>
         </ul>
         <p>SOAP</p>
-        <h1 id="js">JavaScript</h1>
-        <p>Rozwój strony:</p>
+        
+        
+        
+        <h2 id="js">JavaScript</h2>
+        
+        
+        
+        <h2>Rozwój strony:</h2>
         <ul> 
             <li>Cheat Sheets Html, Css, Js, Vue</li>
             <ul>
@@ -163,6 +193,7 @@
             <li>Wybór języka</li>
             <li>Nowa domena</li>
             <li>Komunikacja chat/komentarze</li>
+            <li>Artykuły</li>
             <li>Bot</li>
             <li>Sekcja audio/video</li>
             <li>Cykliczny update</li>
