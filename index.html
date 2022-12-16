@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NooBook Web PL</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="logo.png">
+
     </head>
     <body style="background-color: rgb(225, 225, 225);">
         <header>
@@ -152,9 +154,132 @@
             <p><b>Layout</b> to inaczej układ naszej strony. Przedstawiamy go za pomocą sekcji i generlanie ułatwia to grupowanie elementów.</p>
             
             <p>&lt;div&gt; - (ang. <i>division - sekcja)</i> Najpopularniejszy element blokowy zwany potocznie boxem lub kontenerem.</p>
-            <h3>Input</h3>            
-            
-            
+            <h3>Input/Formularze</h3>
+            <p>Input (ang. dane wejściowe) to miejsce, gdzie użytkownik może wpisać jakąś wartość. Jest to samozamykający się element, także nie będzie miał znacznika zamykającego.</p>
+            <p>Poprawne formowanie wymaga dodania do inputa argumentu <i>type</i> i jego własności, np. najpopularniejsza <i>text</i>, żeby określić jakiego typu danych przeglądarka ma oczekiwać:</p>
+            <input type="text">
+            <p>Każda własność odnosi się do jakiegoś tekstu, który można wprowadzić, różnią się między sobą zwykle niuansami, np. bardziej szczegółowa własność, niż <i>text</i>, to <i>password</i>, która oczekuje podania konkretnie hasła, a różnica jest taka, że wprowadzane znaki znane są dla maszyny, ale dla użytkownika pokażą się jedynie gwiazdki (ang. bullety):</p>
+            <input type="password">
+            <p>Możemy równiez automatycznie określić wartość inputa za pomocą kolejnego argumentu, jakim jest <i>value</i> i tekst jako jego własność. Po co jednak wpisywać wartość w miejsce, gdzie coś ma wpisać użytkownik? Może to być np. wartość domyślna lub wskazówka co zapisać w środku. -> przykład</p>
+            <p>Możemy również zamknąć możliwość wpisywania jakieś wartości użytkownikowi za pomocą atrybutu <i>disabled</i>. Przyda się w sytuacji, jak np. wartość zapisał już wcześniej.</p>
+            <p>Pozostałe typy to: </p>
+            <ul>
+                <li>&lt;input type="button"&gt; <input type="button"></li> 
+                <li>&lt;input type="color"&gt; <input type="color"></li>
+                <li>&lt;input type="date"&gt; <input type="date"></li>
+                <li>&lt;input type="datetime"&gt; <input type="datetime"></li>
+                <li>&lt;input type="DatetimeLocal"&gt; <input type="DatetimeLocal"></li>
+                <li>&lt;input type="FileUpload"&gt; <input type="FileUpload"></li>
+                <li>&lt;input type="hidden"&gt; <input type="hidden"></li>
+                <li>&lt;input type="image"&gt; <input type="image"></li>
+                <li>&lt;input type="month"&gt; <input type="month"></li>
+                <li>&lt;input type="range"&gt; <input type="range"></li>
+                <li>&lt;input type="time"&gt; <input type="time"></li>
+                <li>&lt;input type="url"&gt; <input type="url"></li>
+                <li>&lt;input type="week"&gt; <input type="week"></li>
+                <li>&lt;input type="checkbox"&gt; - tu warto dodać <i>label</i>, żeby opisać co będziemy zaznaczać <label><input type="checkbox">Jestem za odgórnym zakazaniem biedy</label>
+                <p>Możemy też dodać argumenty <i>checked</i> i <i>disabled</i>:</p>
+                <label><input type="checkbox"checked disabled>Miałem wybór</label></li>
+                <br>
+                <li>&lt;input type="radio"&gt; - jest to taki przycisk wykluczający, tak więc żeby działał poprawnie trzeba zrobić conajmniej trzy inputy, którym dodajemy taki sam argumenty <i>name</i>, po którym będzie wiadomo które inputy należą do grupy wzajemnie się wykluczających:
+                    <br>
+                    <label><input type="radio" name="example" value="Ciastko">Ciastko</label>
+                    <label><input type="radio" name="example" value="Karmel">Karmel</label>
+                    <label><input type="radio" name="example" value="CZEKOLAAADA">CZEKOLAAADA</label></li>
+                    <p>Warto pamiętać, że nadal jest to input, a żadnej wartości użytkownik nie wpisuje, dlatego zaleca się do każdego radio buttona dopisać argument <i>value</i> o tej samej nazwie, co etykieta, żeby dostarczyć konkretną wartość</p>
+                    <p>Możemy również dodać argument <i>checked</i> przy jednym z radio buttonów i wtedy będzie on automatycznie zaznaczony, ale nadal możliwy do zmiany</p>
+                </ul>
+            <p><b>Label</b> (ang. etykieta) to opis elementu. Posiada argument <i>for</i>, w którym określamy do jakiego <i>id</i> się odnosi (czyli musimy wcześniej do naszego inputa dodać argument <i>id</i>). Przy jednym inpucie jeszcze ok, ale jeśli jest więcej do zrobienia, to zaleca się zagnieżdżenie inputa w labelu, efekt jest ten sam (//pokazać pisownię):</p>
+            <label for="price">Cena</label>
+            <input type="text" id="price">
+            <label>Cena <input type="text"></label>
+
+            <p><b>Placeholder</b>to wyblakłe oznacznie pola w samym polu, które znika wraz z rozpoczęciem wpisywania jakiejś wartości, zapisywane jako argument inputa. Bzmi dziwnie, ale jak się spojrzy od razu wiadomo o co chodzi:</p>
+            <input type="text" placeholder="oto nasz placeholder!">
+
+                <p><b>&lt;Textarea&gt;</b>- to takie miejsce na większą ilość tekstu:</p>
+                <textarea cols="30" rows="10"></textarea>
+                <p>Za pomocą argumenty <i>cols</i> możemy określić szerokość obszaru tekstowego, <i>rows</i> użyjemy do długości</p>
+                
+            <p>&lt;select&gt; - tym elementem dodajemy kilka opcji do wyboru z rozwijanego menu. Opcje określamy elementem <i>options</i>: </p>
+            <label for="choice"><i>Wybierz mądrze:</i></p>
+            <select name="" id="choice">
+                <option value="pięty">pięty</option>
+                <option value="wiadro">wiadro</option>
+                <option value="siłownik">siłownik</option>
+            </select>
+            <p>Przy opcjach należy pamiętać o uzupełnieniu argumentu <i>value</i></p>
+            <p>Mozemy również ustalić jakąś opcję wybraną domyślnie za pomocą argumentu <i>selected</i></p>
+            <p>Możemy także umożliwić wybór kilku opcji (trzeba przytrzymać <i>ctrl</i> lub <i>shift</i>) dodając argument <i>selected</i> do elementu <i>select</i>:</p>
+            <label for="choice2"></label>
+            <select name="" id="choice2" multiple>
+            <option value="jeden">jeden</option>
+            <option value="dwa">dwa</option>
+            <option value="czy">czy</option>
+            <option value="cztery">cztery</option>
+            <option value="pięć">pięć</option>
+        </select>
+            <p>Możemy także grupować opcje za pomocą elementu <i>optgroup</i>:</p>
+            <label for="choice3"></label>
+            <select name="" id="choice3">
+            <optgroup label="Grupa 1">
+            <option value="wybór 1">1</option>
+            <option value="wybór 2">2</option>
+        </optgroup>
+
+            <optgroup label="Grupa 2">
+                <option value="wybór 3">3</option>
+                <option value="wybór 4">4</option>
+            </optgroup>
+        </select>
+                
+                
+            <p><b>datalist</b>- dodając ten element pod <i>input</i> możemy dać możliwość wpisania użytkownikowi jakiejkolwiek wartości, a prócz tego będzie mógł coś wybrać z listy:</p>
+            <input list="musicans">
+            <datalist id="musicans">
+                <option value="Behemoth">Behemoth</option>
+                <option value="Gojira">Gojira</option>
+                <option value="Static-X">Static-X</option>
+                <option value="Zenek">Zenek</option>
+            </datalist>
+            <p>Do inputa dodajemy argument <i>list</i>z własnością o nazwie jaką chcemy dodać inputowi, natomiast <i>datalist</i> otrzymuje argument <i>id</i>o tej samej nazwie, co list w inpucie.</p>
+
+            <p><b>&lt;fieldset&gt;</b>- to taki zestaw pól w ramce, do którego możemy dodawać inputy. Możemy zagnieździć też element <i>legend</i> aby dodać tytuł:</p>
+            <fieldset>
+                <legend>Tu jest tytuł</legend>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </fieldset>
+                
+            <p><b>&lt;Form&gt;</b>- tworzenie formularza. Wrzucamy w niego inputy. Dane wyślemy na serer za pomocą inputa <i>submit</i></p>
+            <form action="form.php">
+                <label>Login <input type="text" name="login"></label>
+                <label>Password <input type="text" name="password"></label>
+                <label>Mail <input type="text" name="mail"></label>
+                <label>Register: <input type="submit" value="Send"></label>
+                
+            </form>
+            <p>W formularzu każde pole musi mieć argument <i>name</i>, co pozwoli rozróżnić rodzaj danych. Nazwy nie mogą mieć odstępów, w razie czego można użyć podkreślnika</p>
+                
+                
+
+
+            <p><b>Komentarze</b>zapisujemy w dwojaki sposób:</p>
+            <p> w znaczniku z wykrzyknikiem i dwoma myślnikami na początku i dwoma myślnikami na końcu  -</p>
+
+            <h3>Trochę SEO</h3>
+
+            <p>&lt;!DOCTYPE html&gt; - informacja dla przeglądarki jaki rodzaj dokumentu ma przed sobą. Będzie to nasza pierwsza linijka kodu.</p>
+            <p>&lt;html lang&gt; - deklaracja języka. Dodajemy do niej wartość konkretnego języka i kraju, np. pl-PL</p>
+            <p>&lt;meta charset="UTF-8"&gt; - deklaracja zestawu znaków. O ile nie będziemy robić strony internetowej dla klienta z Dalekiego Wschodu, to zawsze powinna wyglądać tak samo. </p>
+            <p>&lt;title&gt; - tytuł naszej strony. Widnieje na górze zakładki i w wynikach wyszukiwania. Można nadać kilka tytułów używając separatorów: - – — · • * | ~ « » < >. Warto zmieścić się w 65 znakach.</p>
+            <p> &lt;meta name="description"&gt; - opis strony. Trochę dłuższa forma <i>title</i>. Opis dodajemy za pomocą atrybutu <i>content</i>. Warto zmieścić się w 160 znakach.</p>
+            <p>&lt;meta name="keywords" content=""&gt; - jest to meta tag ze słowami kluczowymi. Raczej już się z tego nie korzysta.</p>
+            <p>&lt;link&gt; - import zewnętrznych plików. Dodaliśmy już dzięki niemu plik CSS, możemy też dodać <i>favicon</i>, czyli ikonkę na zakładce wyświetlaną przy tytule strony.</p>
+                
                 <h2 id="css">CSS Cheat Sheet</h2>
             
             <p><strong>CSS</strong> - (Cascading Style Sheets) arkusze stylów zawierające zasady formatowania strony internetowej, czyli to jak wygląda.</p>
@@ -181,14 +306,42 @@
             </ul>
         <p><b>Gradienty</b> to płynne przejścia kolorów z jednego w drugi.</p>
         
-        
+        <p><b>Box model</b></p>
+        <p>Domyślnie <i>div przyjmuje szerokość rodzica, czyli elementu, w którym jest zagnieżdżony.</i></p>
+        <p>Sekcja <i>bidy</i> przyjmuje szerokość przeglądarki. Oczywiście możemy ją zmienić za pomocą atrybutu width. Element blokowy musi mieć treść lub zdefiniowaną szerokość + wysokość żeby poprawnie się wyświetlić.</p>
+        <p>Czcionki serif mają ładne wykończenia, snas-serif takich nie mają. Te z nazwą <i>monospace</i> mają każdą literę o tej samej szerokości. <i>Web Safe Fonts</i> wyświetlają się na każdej przeglądarce tak samo.</p>
+        <p> font-family - rodzina czcionki, np. Arial. Możemy dodać kilka czcionek po sobie, każda kolejna będzie kołem ratunkowym jeśli będzie coś nie tak z wcześniejszą.</p>
+        <p>font-size - rozmiar czcionki (rozpiętość pomiędzy znakiem najwyżej i najniżej). Określany za pomocą jednostek absolutnych: pikseli (px), punktów (pt. 1pt = 1.33px), lub relatywnych: em (1 em przyjmuje wartość 1jednostki rodzica) i %</p>
+        <p>text-align - wyrównywanie tekstu </p>
+        <p>text-transform - zmiana wielkości liter</p>
+        <p>text-decoration - dekoracja tesktu (podkreślenie, przekreślenie, nadkreślenie)</p>
+        <p>text-indent - wcięcie tekstu </p>
+        <p>text-shadow - cień tekstu</p>
+        <p>letter-spacing - odstępy między literami</p>
+        <p>word-spacing - odstępu między wyrazami</p>
+        <p>white-space - (enter, spacja, tabulator)</p>
+        <p>overflow - wystawanie zawartości poza element</p>
     
         
         
         
         <h2 id="js">JavaScript</h2>
-        <h2 id="teoria">Niezbędna teoria</h2>      
-        
+        <h2 id="teoria">Niezbędna teoria</h2>
+
+        <p><b>Frontend</b>- jedna z dwóch głównych warstw programowania stron internetowych. Jest to tzw. warstwa użytkownika, czyli to, co użytkownik widzi. Frontend tworzymy za pomocą języków HTML, CSS, JavaScript. </p>
+        <p><b>JavaScript</b>- skryptowy język programowania nadający m.in. dynamikę naszym stronom. Nasłuchuje czego potrzebuje użytkownik i reaguje tak, jak to zaprogramowaliśmy.</p>
+        <p>JavaScript posiada wiele bibliotek, które ułatwiają korzystanie z niego. Jedną z najpopularniejszych jest jQuery, choć przy tworzeniu nowych stron można powiedzieć, że swoje lata świetności już ma za sobą.</p>
+
+        <p><b>Backend</b>- ta niewidoczna warstwa dla użytkownika. Stamtąd np. przeglądarka pobiera różne dane, np. obrazy na stronę. Przy tworzeniu stron internetowych musimy wszystkie pliki zamieścić na serwerze. Na każde zapytanie użytkownika serwer odpowiada za pomocą odpowiedzi HTTP.</p>
+        <p>Kody odpowiedzi HTTP:</p>
+        <ul>
+            <li><b>200</b> - wszystko ok</li>
+            <li><b>403</b>- brak autoryzacji</li>
+            <li><b>404</b>- podano złą ścieżkę lub strona już nie istnieje na serwerze</li>
+            <li><b>500</b>- błąd serwera</li>
+            <li><b>503</b>- błąd serwera</li>
+        </ul>
+        <p><b>Bazy danych</b>- są to te same dane, co na serwerze, ale uporządkowane w określony sposób, np. klucz-wartość. Języki wyciągające te dane nazywa się tymi po stronie serwera (Java, PHP, Python, Ruby, etc.).  </p>
         <h3>Paradygmaty programowania</h3>
         <p>Programowanie imperatywane - mówimy komputerowi co ma robić</p>
         <p>Programowanie strukturalne - rodzaj programowania imperatywnego. Kod czytany z góry do dołu. Skupiamy się na pisaniu funkcji</p>
