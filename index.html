@@ -14,7 +14,7 @@
             <a href="http://lucasklis.github.io">
                 <img src="logo.png" alt="logoNooBook" width="200" height="200">
             </a>
-            <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 14.12.22)</h1>
+            <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 20.12.22)</h1>
             <nav>
                 <ul>
                     <li><a href="#html">HTML</a></li>
@@ -280,10 +280,33 @@
             <p>&lt;meta name="keywords" content=""&gt; - jest to meta tag ze słowami kluczowymi. Raczej już się z tego nie korzysta.</p>
             <p>&lt;link&gt; - import zewnętrznych plików. Dodaliśmy już dzięki niemu plik CSS, możemy też dodać <i>favicon</i>, czyli ikonkę na zakładce wyświetlaną przy tytule strony.</p>
                 
-                <h2 id="css">CSS Cheat Sheet</h2>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+            <h2 id="css">CSS Cheat Sheet</h2>
             
             <p><strong>CSS</strong> - (Cascading Style Sheets) arkusze stylów zawierające zasady formatowania strony internetowej, czyli to jak wygląda.</p>
-            <p>Reguły/Zasady CSS zbudowane są z własności(property) zakończonej dwokropkiem, następującej po nim wartości (value) i na końcu średnikiem.</p>
+            <p>Reguły/Zasady/Deklaracje CSS zbudowane są z własności(ang. property, czyli co chcemy ostylować) zakończonej dwokropkiem, następującej po nim wartości (ang. value, czyli jak chcemy coś ostylować) i na końcu średnikiem.</p>
             <p>Wartości moga mieć kilka własności oddzielonych spacją.</p>
             <img src="css-budowa.png" alt="budowa css" width="400" height="300">
             <p>Reguły CSS wiążemy z konkretnymi elementami za pomocą <i>selektorów</i></p>
@@ -292,8 +315,17 @@
                 <li>wcześniej stworzone <i>id</i>elementu, np. <b>#identyfikatorelementu</b></li>
                 <li>bądź też <i>klasa</i>elementu, np. <b>.nazwaklasy</b></li>
                 <li>jak równiez i sam element, np. <b>h1</b></li>
+                <li>a także atrybuty elementów, jak np. kliknięty przycisk (&lt;button clicked&gt;Click&lt;/button&gt;), za pomocą nawiasów kwadratowych - <b>[clicked] {color: red}</b></li>
+                <li>jest jeszcze gwiazdka, która oznacza, że stylujemy dosłownie każdy element na stronie. Rzadko więc się z tego korzysta</li>
+
             </ul>
-            <h3>Dodawanie CSS</h3>
+            <p>Klasy nadpisują elementy. Te same selektory są nadpisywane przez późniejszy. Deklaracje <i>liniowe (inline) mają większy priorytet (specyficzność), niż w zewnętrzym pliku lub elemencie style </i></p>
+            <p>Specyficzność CSS - elementy , gwiazdka i pseudo-selektory mają najniższy priorytet, potem są klasy i pseudo-klasy, potem jest selektor id, a na końcu sylowanie liniowe.  </p>
+            <p>Dziedziczenie CSS - element dzidziczy niektóre stylowanie od rodzica </p>
+            <p>Kombinatory CSS dają nam możliwość bardziej konkretnie określić o który element nam chodzi. Innymi słowy, łączą selektor z elementem, w którym się znajdują, czyli te same selektory poza tym elementem nie będą ostylowane. Robimy to wpisując po prostu w CSS przed stylowany selektor element, w którym jest zawarty i oddzielamy od selektora spacją  </p>
+            <p>Rodzaje kombinatorów:</p>
+            <img src="css-combinators.pdf" alt="kombinatory">
+            <h3>Dodawanie CSS</h3>  
             <p>Istnieją trzy możliwości:</p>
             <ul>
                 <li>za pomocą tzw. liniowego stylu, czyli umieszczenia atrybutu <i>style</i> bezpośrednio w elemencie html - <i>&lt;p style="itutajcss"&gt;</i>. Nie zaleca się korzystania z tego sposobu ze względu na zmniejszanie czytelności kodu.</li>
@@ -304,11 +336,29 @@
                     <p>!Element <i>&lt;link&gt;</i> to nie to samo, co element <i>&lt;a&gt;</i></p>. Ten pierwszy zawsze występuje w sekcji <i>head</i>, drugi 
 
             </ul>
+        <p>Kolory określamy za pomocą: hexów, dodając krzyżyk (#), po którym wpisujemy kod odpowiedni dla każdego koloru. </p>    
         <p><b>Gradienty</b> to płynne przejścia kolorów z jednego w drugi.</p>
-        
+        <p>Czcionki możemy importować z Google Fonts. Wystarczy wkleić link w nasz plik html w headzie. Dodać taką czcionkę możemy za pomocą deklaracji <i>font-family: 'itunazwaczcionki', serfif/sans-serif/monospace;</i></p>
+
+
+
         <p><b>Box model</b></p>
+        <p>Każdy element html jest traktowany jako box (pudełko) przez CSS i składa się z 4 częsci:</p>
+        <ul>
+            <li><b>content</b> - zawartość elementu</li>
+            <li><b>padding</b> - (ang. podszycie) wewnętrzna przestrzeń w elemencie pomiędzy zawartością, a granicą (border)</li>
+            <li><b>border</b> - otacza element i zaczyna się wraz z końcem paddingu </li>
+            <li><b>margin </b>- obszar dokoła elementu, tak więc margin jest już poza elementem.</li>
+        </ul>
+        <p>Domyślnie <i>body</i> ma zapisany margin: 8px, także jeśli chcielibyśmy poszerzyć nasz element na realnie całą stronę, musimy zapisać margin body = 0px</p>
+        <p><b>Zapadanie się maringesów</b> (ang. marign collapsing) - jeśli dwa elementy obok siebie mają maringesy, to "zapadają" się one w jeden (tylko jeden - ten większy - jest brany pod uwagę)  </p>
+        <img src="css-margin-collapsing.pdf" alt="margin collapsing">
+        <p><b>skróty właściwości (ang. shorthand properties)</b></p>
+        <img src="css-shorthand-properties.pdf" alt="skróty właściwości">
+        <p>Jeśli kiedykolwiek będziesz chciał określić relatywną wysokość elementu względem strony (ile % strony ma zająć element), to musisz przekazać atrybut <i>height: 100%</i> od <i>body</i>, po sam element.</p>
+        <p>box-sizing: border-box; - taka własność jest mega popularna i zmienia standardowe dodawanie marginesu i paddingu do wysokości i szerokości przez nas ustalonych tak, aby wynik wynosił tyle, jakie wartości ustawiliśmy (bez tego margines i padding zostanie dodany do wysokości i szerokości, którą ustaliliśmy). </p>
         <p>Domyślnie <i>div przyjmuje szerokość rodzica, czyli elementu, w którym jest zagnieżdżony.</i></p>
-        <p>Sekcja <i>bidy</i> przyjmuje szerokość przeglądarki. Oczywiście możemy ją zmienić za pomocą atrybutu width. Element blokowy musi mieć treść lub zdefiniowaną szerokość + wysokość żeby poprawnie się wyświetlić.</p>
+        <p>Sekcja <i>body</i> przyjmuje szerokość przeglądarki. Oczywiście możemy ją zmienić za pomocą atrybutu width. Element blokowy musi mieć treść lub zdefiniowaną szerokość + wysokość żeby poprawnie się wyświetlić.</p>
         <p>Czcionki serif mają ładne wykończenia, snas-serif takich nie mają. Te z nazwą <i>monospace</i> mają każdą literę o tej samej szerokości. <i>Web Safe Fonts</i> wyświetlają się na każdej przeglądarce tak samo.</p>
         <p> font-family - rodzina czcionki, np. Arial. Możemy dodać kilka czcionek po sobie, każda kolejna będzie kołem ratunkowym jeśli będzie coś nie tak z wcześniejszą.</p>
         <p>font-size - rozmiar czcionki (rozpiętość pomiędzy znakiem najwyżej i najniżej). Określany za pomocą jednostek absolutnych: pikseli (px), punktów (pt. 1pt = 1.33px), lub relatywnych: em (1 em przyjmuje wartość 1jednostki rodzica) i %</p>
@@ -322,9 +372,33 @@
         <p>white-space - (enter, spacja, tabulator)</p>
         <p>overflow - wystawanie zawartości poza element</p>
     
-        
-        
-        
+        <p><b>display</b> - właściwość zmieniająca zachowanie elementów z blokowego na liniowe lub miksem obydwóch (<i>inline-block</i>), dzięki czemu elementy mogą występować obok siebie, ale nadal zachowują się jak elementy blokowe przy określaniu marginesów, paddingu, etc.. <i>Display</i> może też przyjąć wartość <i>none</i> i element nie będzie wtedy wyświetlony, natomiast pozostałe elementy będą mogły przejąć jego miejsce. To jest właśnie różnica między bardzo podobną właściwością <i>visibility:hidden</i>, która pozwala zachować elementowi swoje miejsce.
+        Warto też zauważyć, że blok zamienia się w linię, to przyjmuje jego właściwości i np. są liczone białe znaki w kodzie!</p>
+        <p><b>text-align</b> - wyrównaj tekst do: </p>
+        <p><b>list-style</b> - edytuj styl listy, np. usuń punktory.</p>
+        <p><b>calc(x - y)</b>- funkcja CSS, która umożliwia przekazanie obliczeń komputerowi. Są do tego lepsze narzędzia, ale warto wiedzieć, że coś takiego istnieje.</p>        
+        <p><b>pseudo-klasy</b> - po swoim selektorze dodaj dwukropek i pseudo-klasę, aby móc ostylować specjalny stan elementu (stylowawnie stanu)</p>
+        <p><b>pseudo-elementy</b>- dodając dwa dwukropki po selektorze otrzymujemy dostęp do pseudo-elementu, czyli specjalnej części elementu (stylowanie części)</p>
+            <p><b>grupowanie zasad</b> - grupujemy za pomocą przecinka </p>
+            <p>Można zrobić background image w cssie za pomocą <i>url("ścieżka")</i></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <h2 id="js">JavaScript</h2>
         <h2 id="teoria">Niezbędna teoria</h2>
 
