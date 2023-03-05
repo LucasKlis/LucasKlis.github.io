@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NooBook Web PL</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="/Public/logo.png">
 
 </head>
 
 <body style="background-color: rgb(225, 225, 225);">
     <header>
-        <img src="underConstruction.png" alt="wBudowie" width="1885" height="920">    
+        <img src="/Public/underConstruction.png" alt="wBudowie" width="1885" height="920">    
         <a href="http://lucasklis.github.io">
-            <img src="logo.png" alt="logoNooBook" width="200" height="200">
+            <img src="/Public/logo.png" alt="logoNooBook" width="200" height="200">
         </a>
         <br>
         <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 31.01.23)</h1>
@@ -31,6 +31,7 @@
         </nav>
     </header>
     <hr>
+    <div id="like_button_container"></div>
     <h2>Cześć, na stronie docelowo ma się znaleźć to, co przyda się każdej osobie rozpoczynającej swoją podróż z
         programowaniem webowm.
         <br>Na początku zawartość strony może być dosyć chaotyczna i przyjmować postać głównie notatek, ale plany są
@@ -50,8 +51,8 @@
         <p><strong>Znaczniki</strong> to wyrażenia zamieszczane w ostrych nawiasach <mark>
                 <>
             </mark> </p>
-        <img src="znacznik-otwarcia-html1.jpg" alt="znacznik otwarcia" width="400" height="300">
-        <img src="znacznik-zamkniecia-html.jpg" alt="znacznik zamknięcia" width="400" height="300">
+        <img src="/Public/znacznik-otwarcia-html1.jpg" alt="znacznik otwarcia" width="400" height="300">
+        <img src="/Public/znacznik-zamkniecia-html.jpg" alt="znacznik zamknięcia" width="400" height="300">
         <p> <strong> &lt;!DOCTYPE html&gt; </strong>- jest to informacja dla przeglądarki o typie dokumentu</p>
         <p> <strong>
                 < html>
@@ -67,7 +68,7 @@ html. </p>
     w sekcji &lt;head&gt;. Charset to skrót od "character set", czyli zestawu znaków, natomiast utf-8 to obecnie
     najpopularniejszy standard stron internetowych.</p>
 <p><b>&lt;h1&gt; - &lt;h6&gt;</b> - nagłówki od największego, do najmniejszego.</p>
-<img src="headings.png" alt="headingi" width="300" height="300">
+<img src="/Public/headings.png" alt="headingi" width="300" height="300">
 <p><b>&lt;p&gt;</b>- paragrafy/akapity z tekstem </p>
 <p><b>&lt;br&gt;</b>- zacznij pisać od nowej linii</p>
 <p><b>lorem ipsum</b> - wypełniacz tekstu. W większości edytorów wystarczy zacząć pisać <i>lorem...</i>, kliknąć enter i
@@ -148,7 +149,7 @@ html. </p>
     ale nadal w ramach tej samej domeny. Linki zewnętrzne natomiast prowadzą do stron znajdujących się na innych
     domenach.</p>
 <p>Każdy element może mieć swój atrybut, który może mieć swoją właśność (property)</p>
-<img src="link-odsylacz.png" alt="link-odsylacz" width="400" height="300">
+<img src="/Public/link-odsylacz.png" alt="link-odsylacz" width="400" height="300">
 <p>SEO - (ang. <i>Search Engine Optimization </i> optymalizacja strony internetowej pod kątem wyszukiwań.</p>
 
 <h3>Grafika</h3>
@@ -193,7 +194,7 @@ html. </p>
     Natomiast elementy blokowe zawsze zajmują całą linię i kolejny element będzie wyświetlony poniżej. </p>
 <p> Przykładem elementów blokowych może być header, paragraf, lista i jej elementy, natomiast liniowe to link,
     pogrubienie, pochylenie, kursywa czy też obraz </p>
-<img src="someLogo.png" width="100" height="100" title="logo v">
+<img src="/Public/someLogo.png" width="100" height="100" title="logo v">
 
 <h3>Klasy i id</h3>
 <p><strong>&lt;id&gt;</strong> - identyfikator elementu, nadawany jako jego atrybut. Może służyć również jako selektor
@@ -216,7 +217,7 @@ html. </p>
         porządku</li>
 
 </ul>
-<img src="layout.png" alt="layout strony">
+<img src="/Public/layout.png" alt="layout strony">
 <p><b>Layout</b> to inaczej układ naszej strony. Przedstawiamy go za pomocą sekcji i generlanie ułatwia to grupowanie
     elementów.</p>
 
@@ -412,7 +413,7 @@ html. </p>
         dwokropkiem, następującej po nim wartości (ang. value, czyli jak chcemy coś ostylować) i na końcu średnikiem.
     </p>
     <p>Wartości moga mieć kilka własności oddzielonych spacją.</p>
-    <img src="css-budowa.png" alt="budowa css" width="400" height="300">
+    <img src="/Public/css-budowa.png" alt="budowa css" width="400" height="300">
     <p>Reguły CSS wiążemy z konkretnymi elementami za pomocą <i>selektorów</i></p>
     <p>Selektorem może być:</p>
     <ul>
@@ -435,7 +436,7 @@ html. </p>
         Robimy to wpisując po prostu w CSS przed stylowany selektor element, w którym jest zawarty i oddzielamy od
         selektora spacją </p>
     <p>Rodzaje kombinatorów:</p>
-    <img src="css-combinators.pdf" alt="kombinatory">
+    <img src="/Public/css-combinators.pdf" alt="kombinatory">
     <p>Elementy mogą mieć kilka klas, ta wpisana później nadpisuje poprzednią. Możemy też łączyć selektory </p>
     <h3>Dodawanie CSS</h3>
     <p>Istnieją trzy możliwości:</p>
@@ -477,9 +478,9 @@ html. </p>
         stronę, musimy zapisać margin body = 0px</p>
     <p><b>Zapadanie się maringesów</b> (ang. marign collapsing) - jeśli dwa elementy obok siebie mają maringesy, to
         "zapadają" się one w jeden (tylko jeden - ten większy - jest brany pod uwagę) </p>
-    <img src="css-margin-collapsing.pdf" alt="margin collapsing">
+    <img src="/Public/css-margin-collapsing.pdf" alt="margin collapsing">
     <p><b>skróty właściwości (ang. shorthand properties)</b></p>
-    <img src="css-shorthand-properties.pdf" alt="skróty właściwości">
+    <img src="/Public/css-shorthand-properties.pdf" alt="skróty właściwości">
     <p>Jeśli kiedykolwiek będziesz chciał określić relatywną wysokość elementu względem strony (ile % strony ma zająć
         element), to musisz przekazać atrybut <i>height: 100%</i> od <i>body</i>, po sam element.</p>
     <p>box-sizing: border-box; - taka własność jest mega popularna i zmienia standardowe dodawanie marginesu i paddingu
@@ -581,12 +582,11 @@ const person = {
 <br> import person from /plikPerson.js (pierwszą nazwę sami wymyślamy i posługujemy się nią w pliku)
 <br> import {kilkaPerson} from /plikPerson.js (importując obiekt musimy wpisać jego nazwę z poprzedniego pliku) 
 </p>
-
-    <script> let person = {
+    &lt;script&gt; let person = {
         name : 'Luki' 
     }
     export default person
-    </script>
+    &lt;/script&gt;
 
     <p>Klasy to taki szkic obiektu. W obiekcie mogą znaleźć się właściwości i metody, gdzie właściwości to zmienne w klasach, a metody to funkcje w klasach.
         <br> Klasę tworzymy z wykorzystaniem słowa new, np. newPerson, newData, etc.
@@ -755,6 +755,12 @@ const person = {
         <li>skróty klawiszowe  VSC</li>
     </ul>
     <hr>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="like_button.js"></script>
+
+    <div id="like_button_container"></div>
+
     </body>
 
     </html>
