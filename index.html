@@ -10,7 +10,7 @@
 
     </head>
     <body style="background-color: rgb(225, 225, 225);">
-        <header>
+            <header>
             <a href="http://lucasklis.github.io">
                 <img src="logo.png" alt="logoNooBook" width="200" height="200">
             </a>
@@ -279,29 +279,6 @@
             <p> &lt;meta name="description"&gt; - opis strony. Trochę dłuższa forma <i>title</i>. Opis dodajemy za pomocą atrybutu <i>content</i>. Warto zmieścić się w 160 znakach.</p>
             <p>&lt;meta name="keywords" content=""&gt; - jest to meta tag ze słowami kluczowymi. Raczej już się z tego nie korzysta.</p>
             <p>&lt;link&gt; - import zewnętrznych plików. Dodaliśmy już dzięki niemu plik CSS, możemy też dodać <i>favicon</i>, czyli ikonkę na zakładce wyświetlaną przy tytule strony.</p>
-                
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
        
             <h2 id="css">CSS Cheat Sheet</h2>
             
@@ -382,6 +359,7 @@
         <p><b>pseudo-elementy</b>- dodając dwa dwukropki po selektorze otrzymujemy dostęp do pseudo-elementu, czyli specjalnej części elementu (stylowanie części)</p>
             <p><b>grupowanie zasad</b> - grupujemy za pomocą przecinka </p>
             <p>Można zrobić background image w cssie za pomocą <i>url("ścieżka")</i></p>
+            <p>czy pisałem już o białych znakach? Żeby aplikacja uwzględniała Twoje odstępy (spacja, entery), użyj atrybutu white-space: pre-line; w Towim cssie lub zamiast znacznika p użyj znacznika pre.</p>
 
 
 
@@ -402,6 +380,185 @@
 
         <h2 id="js">JavaScript</h2>
         <p>refresher</p>
+        <p>JavaScript –  wcześniej LiveScript, to lekki, dynamiczny, słabo typowalny (nie  musimy dedykować konkretnych typów danych), kompilowany „w locie” język (działa w jednym wątku, można go zmienić podczas działania) skryptowy. js sam w sobie nie jest asynchroniczny, ale w połączeniu z przeglądarką lub Node.js już może być.</p>
+        <p>JS działa dzięki silnikowi w Twojej przeglądarce. Każda pzerglądarka ma takowy wbudowany, np. Chrome ma silnik o nazwie V8, silnik Firefoxa to SpiderMonkey. Silniki te analizują, kompilują i wykonują kod JS. </p>
+        <p>JS dziąła na środowisku gospodarza - w przeglądarce lub na serwerze (jako Node.js). JS nie ma dostępu do lokalnej maszyny i współpracować z systemem operacyjnym, ale Node.js już to może.  </p>
+        <p>JS pozwala tworzyć dynamiczne strony, manipulować kodem HTML, CSS, wysyłać zapytania HTTP, etc.</p>  
+            <p>JS to najpopularniejsza implementacja standardów ECMA Script</p>
+        <p>Dodawnie kodu JS do naszej aplikacji - są 3 sposoby: a) pomiędzy znacznik script. b) za pomocą importu zewnętrznego pliku w sekcji body.  </p>
+        <p>Zmienne i stałe, deklaracja - Zmienne to pojemniki na dane (albo bardziej adresy do danych). Dane w tych pojemnikach mogą się zmieniać, co w moim rozumieniu pozwala JSowi na bycie elastycznym/dynamicznym językiem.
+            Zawartość zmiennych można nadpisywać: userName = ‘Luki’;
+            </p>
+            <p>1.Scope - zakres zmiennych i funkcji. W ES6 został rozbudowany i zależny od samej deklaracji zmiennej. Może być globalny lub lokalny
+                1.1 let –  zmienne w ramach bloku kodu
+                1.2 const – stałe w ramach bloku kodu
+                1.3 var – zmienna w ramach funkcji lub poza funkcją
+                1.4 brak modyfikatora – to to samo co przypisanie do globalnej przestrzeni
+                Jak wyżej, nie musimy przy tym znów pisać let, czy też jakiegokolwiek innego typu zmiennych.
+                Bo mamy też inny typ zmiennych – const, czyli stała (idąc dalej: niezmienna zmienna…). Przy const nie możemy zmienić jego zawartości.
+
+                
+                const totalUsers = 15
+                totalUsers = 20  !ERROR!	</p>
+<p>Nazywanie zmiennych - JS wykrywa czy znak jest duży, czy mały. Najlepsza praktyka = camelCase, czyli zaczynamy z małej literym i każde następne słowo dodajemy z dużej, oczywiście bez odstępów.
+    Jest też kebab-case, czyli zamiast dużej litery oddzielamy słowa myślnikiem. Złą praktyką jest tzw. snake_case, z podkreślnikiem między słowami. 
+    Do nazywania możemy żyć liter, liczb (ale nie zaczynajmny nazwy od liczby), znaków dolara i podkreślenia (ale nie pozostałych znaków specjalnych!). Aha, nie używamy również słów kluczowych, czyli let, const, var, aby nazwać zmienną. No ma to sens.
+    Zmienna nie musi posiadać wartości, także możesz sobie stworzyć let pustaZmienna i tyle. Bez znaczenia, z wartością czy bez, mówimy, że zmienna na tym etapie jest zadeklarowana, czyli program zdcaje sobie sprawę z jej istanienia, ale nie jest jeszcze zainicjowana lub zdefiniowana.
+    Koniec linii w JS zaznaczamy za pomocą średnika, szczególnie, jeśli oddzielamy dwa wyrażenia. Warto je dodawać nawet wtedy, kiedy jest to opcjonalne, ponieważ wiele innych języków uznaje to za  must-have i warto sobie w razie czego wyrobić dobry nawyk.
+
+</p>
+
+<p>Jest jeszcze var, które przed EcmaScript5 była jedyną formą zmiennej, ale obecnie się od nie j odchodzi, aby kod był bardziej przejrzysty. Warto jednak wspomnieć, że spotkałem na swojej drodze informacje, które wskazują na wyjątkowe właściwości var,  które cały czas mogą się przydawać (jak np. hoisting, czyli windowanie, czyyli przeniesienie deklaracji na samą górę)
+
+    Nadawanie nazw zmiennym:
+    - wielkości liter mają znaczenie
+    - nazwę zapisujemy w dwóch formatach: camelCase i kebab-case
+    -nazwa może zacząć się od ‘$’ lub ‘_’  
+    -nazwa nie powinna składać się z podkreślników (snake_case)
+    -nazwa nie może zaczynać się od cyfry
+    - nazwa nie może zawierać specjalnych znaków (prócz wspomnianych $ i _)
+    - nazwa zmiennej nie może być rodzajem zmiennej (var, let, const)
+    
+    Stworzenie zmiennej nazywa się deklaracją zmiennej (let userName)
+    Inicjalizacja/Zdefiniowanie zmiennej to przypisanie do niej wartości (letUserName = ‘Luki’)
+    
+    Generalnie na końcu linijki stawiamy średnik (ang. semi-colon). Nie są obowiązkowe, więc po co je pisać? Bo w innych językach programowania są obowiązkowe i łatwiej się przestawić.
+    </p>
+        
+<p>Operatory pozwalają nam na manipulowanie wartościami. Te standardowe (matematyczne) znamy całkiem nieźle:
+
+    + dodaj, - odejmij, * (ang. asterisk) pomnóż, / podziel
+    Należy jeszcze dodać: ,% (modulo) pokaż resztę z dzielenia, ** (potęga) spotęguj, = przypisz
+    Operatory Przypisania - operatory, które służą do przypisania do zmiennej wartości, pola, obiektu itp. Poniżej przykłady dla x = 10 i y = 5
+    Operator
+    Przykład
+    Równoznaczne z
+    Wynik
+    =
+    x = y
+    x = y
+    x = 5
+    +=
+    x += y
+    x = x + y
+    x = 15
+    -=
+    x -= y
+    x = x - y
+    x = 5
+    *=
+    x *= y
+    x = x * y
+    x = 50
+    /=
+    x /= y
+    x = x / y
+    x = 2
+    %=
+    x %= y
+    x = x % y
+    x = 0
+    
+    Operatory Porównania stosuje się w instrukcjach warunkowych. Służą one do porównywania lewej strony równania do prawej, w wyniku której zawsze zwracana jest true/false.
+    Poniżej przykłady dla x = 5
+    Operator
+    Opis
+    Równanie
+    Zwróci
+    ==
+    równe
+    x == 8
+    false
+    !=
+    różne
+    x != 8
+    true
+    ===
+    równa wartość i taki sam typ danychW naszym przykładzie x to numer, a 5 po prawej stronie jest tekstem
+    x === 5
+    true
+    x === "5"
+    false
+    !==
+    różne wartości lub różny typ danychW naszym przykładzie x to numer, a 5 po prawej stronie jest tekstem
+    x !== "5"
+    true
+    x !== 5
+    false
+    >
+    większe od
+    x > 8
+    false
+    <
+    mniejsze od
+    x < 8
+    true
+    >=
+    większe bądź równe od
+    x >= 8
+    false
+    <=
+    mniejsze bądź równe od
+    x <= 8
+    true
+    
+    
+    Operatory Logiczne są także stosowane w instrukcjach warunkowych. Za ich pomocą możemy łączyć kilka porównań w jedną całość. Poniżej przykłady dla x = 6 i y = 3:
+    Operator
+    Opis
+    Przykład
+    Wynik
+    &&
+    and (i)
+    (x < 10 && y > 1)
+    Prawda, bo x jest mniejsze od 10 i y jest większe od 1
+    ||
+    or (lub)
+    (x > 8 || y > 1)
+    Prawda, bo x nie jest większe od 8, ale y jest większe od 1
+    ^
+    xor (jeden z, ale nie dwa równocześnie)
+    (x === 6 ^ y === 3)
+    Fałsz, bo obydwa są prawdziwe
+    !
+    not (negacja)
+    !(x === y)
+    Prawda, bo negujemy to, że x === y
+    
+    
+    Operator warunkowy (ternary operator) - skrócona odmiana instrukcji warunkowej if. Podajemy sprawdzaną wartość, potem znak zapytania, następnie kod wykonany jeśli true, potem dwukropek, następnie kod wykonany jeśli false.
+    
+    const userName = isLogin ?’Max’: null (znak zapytania z dwukropkiem)
+    
+    najpierw jest warunek („isLogin” w tym przypadku)
+    następnie stawiamy znak zapytania
+    potem -  jeśli warunek jest spełniony (true) – zwracana jest wartość zapisana po znaku zapytania
+    co istotne, mamy dzięki temu wartość w naszej stałej
+    
+    Poniżej za pomocą operatora + i = przypisaliśmy nową wartość do zmiennej currentResult:
+    
+    let currentResult = 0;
+    
+    currentResult = currentResult + 10;
+    Co może się przydać potem: kod czytany jest od prawej strony znaku przypisania (=). Czyli odnosząc to do powyższego przykładu najpierw wykona się działanie po prawej stronie, którego wynik zostanie następnie przypisany do wartości z lewej strony.
+
+    </p>        
+    <p>Jeśli chodzi o liczby spotkasz się z dwoma terminami:
+        toFixed(digits)
+        zwraca tekst będący liczbą zapisaną z daną precyzją. Parametr digits określa liczbę cyfr po przecinku
+        toPrecision(digits)
+        bardzo podobna do powyższej. Główną różnicą jest parametr digits, który określa liczbę cyfr w całym zapisie. Opcjonalny parametr digits dodatkowo musi być z przedziału 1-100
+        
+        
+        Typy danych – proste (prymitywne) [Number, String, Boolean, Null, Undefined, Symbol) i złożone (referencyjne) [obiekty]
+        
+        Liczby – liczby niecałkowite to z angielskiego floats, a całkowite integers (non-decimal)
+        Tekst (String) – ‘hej’, „hej”, `hej`. Te ostatnie to tzw. backticks
+    </p>    
+        
+        
+        
+        
         
         <h2 id="teoria">Niezbędna teoria</h2>
 
@@ -471,5 +628,7 @@
             <li>Cykliczny update</li>
         </ul>
         <hr>
+        <script src="app.js"></script>
+
         </body>
 </html>
