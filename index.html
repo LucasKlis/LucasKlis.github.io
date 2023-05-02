@@ -14,7 +14,7 @@
             <a href="http://lucasklis.github.io">
                 <img src="logo.png" alt="logoNooBook" width="200" height="200">
             </a>
-            <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 20.12.22)</h1>
+            <h1>Wiedza na start w programowaniu webowym (strona w budowie, ostatni update - 02.05.22)</h1>
             <nav>
                 <ul>
                     <li><a href="#html">HTML</a></li>
@@ -555,11 +555,79 @@
         Liczby – liczby niecałkowite to z angielskiego floats, a całkowite integers (non-decimal)
         Tekst (String) – ‘hej’, „hej”, `hej`. Te ostatnie to tzw. backticks
     </p>    
+    
+    <p>konkatenacja – łączenie. Używa się do tego wspomnianych przed chwilą backticksów, które ułatwiają zapisywanie kilku stringów. Konkretnie, nie musisz się martwić o te wszystkie cudzysłowy, robisz ` i piszesz tu swoje stringi. Kończysz oczywiście tak `. W takim zapisie jak zapiszesz znaczek dolara i klamry/wąsy ${}, to w środku nich możesz zapisywać dynamiczne dane, np. funkcje. Jakby nie zapisać symboli dolara i wąsów, to program potraktuje Twoje zmienne jak zwykły tekst i można je wtedy o kant dupy potłuc. Cały taki zapis nazywa się template literals. Plusem backticksów jest też to, że traktują Twoje przerwy w znakach (spacja, wcięcia) normalnie. W zwykłych cudzysłowach program po prostu je pominie, stąd też często można spotkać zapisy „” co oznacza po prostu spację. Można też użyć \n w stringu, co zrobi przerwę. Generalnie backslash (\) w połączeniu z jakimś znakiem w stringu ma specjalne znaczenie.
+    </p>
+    <p>26. Funkcje -  to taki kod na żądanie. Konstrukt językowy występujący raczej w każdym języku programowania, który pozwala nam zdefiniować kod, który będzie mógł być potem wykorzystany.
         
+        Function greetUser(name) {
+            alert(‘Hi ‘ + name);
+        }
+        gdzie function to keyword
+        greetUser to przykład jakiejkolwiek nazwy wymyślonej przez nas dla funkcji
+        w nawiasach znajdują się parametry funkcji (w tym przypadku parametr name, choć funkcja może nie mieć parametrów w ogóle)
+        w nawiasach klamrowych znajduje się tzw. ciało funkcji, czyli kod, który wykona się jeśli przywołamy funkcję. Funkcja może także coś zwracać za pomocą keyworda return.
         
+        Średnik stawiamy po definiowaniu zmiennych, ale nie po deklarowaniu funkcji!
         
+        Aby funkcja zadziałała należy ją wywołać poprzez wypisanie jej nazwy z parametrami w nawiasach. Każde wywołanie funkcji działa niezależnie od poprzedniego wywołania (duża elastyczność): 	greetUser(‘Max’);
         
+        Kolejność ma znaczenie dla zmiennych i stałych, nie dla funkcji.
         
+        Słowo return pozwala na zwrócenie jakiejś zmiennej czegoś z funkcji.
+        Wewnątrz funkcji masz dostęp do zmiennych globalnych i oczywiście lokalnych.
+        Po return żaden kod nie zostanie odpalony (return kończy funkcję)
+        <p>Kod czytany jest od góry do dołu, dlatego wszystkie zmienne muszą najpierw byc zadeklarowane, zanim zostaną wywołane.
+            Inaczej jest z funkcjami - funkcja może być wywołana przed deklaracją, ponieważ przeglądarka najpierw - uwaga - przegląda kod i go sobie segreguje i rejestruje (parsuje), dopiero potem wykonuje.
+            Tak więc nawet jeśli wywołujemy funkcję przed deklaracją będzie wszystko w porządku, ponieważ zanim przeglądarka zabierze się za wywoływanie przejrzy napierw cały kod i dojdzie do jej deklaracji.
+            Wtedy przeglądarka patrzy na kod i myśli sobie: "Ludzie...", po czym wynosi na samą górę kodu deklarację funkcji tak, żeby wszystko było po bożemu.
+          </p>
+        
+          W naszym kodzie tworząc zmienne mają one zasięg (scope) globalny. W ciele funkcji też możemy tworzyć zmienne i mają one wtedy zasięg lokalny, inaczej blokowy, czyli mieszczący się w ciele funkcji. 
+          W funkcji możesz odnosić się do każdej zmiennej poza nią (do tych globalnych), ale nie na odwrót, czyli globalnie nie wywołasz zmiennej blokowej/lokalnej.
+        Unikamy tworzenia funkcji, które manipulują globlanymi zmiennymi. Funkcje, które nie zmieniają żadnych globalnych zmeinnych nazywamy czystymi funkcjami (pure functions).
+        Cieniowanie zmiennych (shadowing variables) polega na stworzeniu zmiennej o tej samej nazwie, ale w innym zakresie (np. zadeklarowano let random = something; globalnie, po czym w funkcji zadeklarowano let random = somethingElse). W tym przypadku program zawsze będzie się odnosić do lokalnej wersji zmiennej random, no, przynajmniej do czasu, aż jej ktoś nie usunie.    
+        
+    </p>
+
+    <p>Event Liestenery
+        .addEventListener(); – funkcja wbudowana w przeglądarkę. Przyjmuje dwa argumenty: pierwszy z nich to string,który identyfikuje wydarzenie, którego chcemy nasłuchiwać (np. 'click', co oznacza, że ta funkcja zostanie wywołana za każdym kliknięciem lewym przyciskiem myszki).
+        Drugim parametrem jest funkcja, czyli co chcemy wywołać (w tym wypadku po każdym kliknięciu). ALE, nie może być za łatwo, tak więc zapisując normalnie funkcję w tym miejscu przeglądarka nie patrząc na nic od razu ją odpali. Rozwiązaniem jest zapisanie jedynie nazwy funkcji w tym miejscu (bez nawiasów i potencjalnych parametrów).
+        Taki zapis funkcji - nazwy zpisanej w miejscu parametru, nazywamy niebezpośrenim wywołaniem funkcji 
+        Zawsze z pola input zwracany jest string.
+        
+        Kolejna ważna, wbudowana funkcja w przeglądarce, to parseInt. parseInt  lub dodanie „+” przed funkcją – inaczej zamień na liczbę całkowitą. Jest to wbudowana funkcja w przeglądarkę i wystarczy dodać ją przed konwertowaną  funkcję.
+parseFloat – to samo, ale z niepełnymi liczbami
+
+    </p>
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <h2 id="teoria">Niezbędna teoria</h2>
 
         <p><b>Frontend</b>- jedna z dwóch głównych warstw programowania stron internetowych. Jest to tzw. warstwa użytkownika, czyli to, co użytkownik widzi. Frontend tworzymy za pomocą języków HTML, CSS, JavaScript. </p>
@@ -629,6 +697,9 @@
         </ul>
         <hr>
         <script src="app.js"></script>
+        <script> 
+
+        </script>
 
         </body>
 </html>
