@@ -1,0 +1,19 @@
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+h1 {
+  background-color: gold;
+  text-align: center;
+}
+h2 {
+  background-color: green;
+}
+p {
+  white-space: pre-line;
+}
